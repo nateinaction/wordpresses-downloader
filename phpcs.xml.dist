@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<ruleset name="WP Core Package">
+    <rule ref="PSR2"/>
+
+    <!-- Check PHP version compatibility -->
+    <rule ref="PHPCompatibility"/>
+    <config name="testVersion" value="7.4-"/>
+
+    <!-- Excluded these dirs -->
+    <exclude-pattern>artifacts</exclude-pattern>
+    <exclude-pattern>src/files/</exclude-pattern>
+    <exclude-pattern>test</exclude-pattern>
+    <exclude-pattern>vendor</exclude-pattern>
+
+    <!-- Show sniff codes in all reports -->
+    <arg value="s"/>
+</ruleset>

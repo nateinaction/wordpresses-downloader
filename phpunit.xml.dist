@@ -1,0 +1,23 @@
+<phpunit colors="true" convertNoticesToExceptions="true">
+    <testsuites>
+        <testsuite name="unit">
+            <directory>test/unit</directory>
+        </testsuite>
+        <testsuite name="integration">
+            <directory>test/integration</directory>
+        </testsuite>
+    </testsuites>
+
+    <filter>
+        <whitelist
+                addUncoveredFilesFromWhitelist="true"
+                processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">src</directory>
+            <exclude>
+                <directory>artifacts</directory>
+                <directory>test</directory>
+                <directory>vendor</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+</phpunit>
